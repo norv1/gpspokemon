@@ -37,6 +37,7 @@ search.addEventListener('click', () => {
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
             const pokemon = document.querySelector('.weather-box .pokemon');
+            const pokemonsub = document.querySelector('.weather-box .pokemonsub');
             const description = document.querySelector('.weather-box .description');
             const type = document.querySelector('.weather-box .type');
             const humidity = document.querySelector('.weather-details .humidity span');
@@ -69,7 +70,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Elétrico";
                     });
                 });
@@ -99,7 +111,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Gelo";
                     });
                 });
@@ -129,7 +152,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Água";
                     });
                 });
@@ -159,7 +193,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Grama";
                     });
                 });
@@ -189,7 +234,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Solo";
                     });
                 });
@@ -219,7 +275,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Inseto";
                     });
                 });
@@ -249,7 +316,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Pedra";
                     });
                 });
@@ -279,7 +357,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Fogo";
                     });
                 });
@@ -309,7 +398,18 @@ search.addEventListener('click', () => {
                     else{
                         image.src = url;
                     }
-                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
+                    let name1 = imgs.name
+                    var name = imgs.species.name
+                    if(name1 === name){
+                        pokemon.innerHTML = name.replaceAll('-', ' ');
+                        pokemonsub.innerHTML = "----"
+                    }
+                    else{
+                        name1 = name1.replace(new RegExp(name, "g"), "");
+                        pokemon.innerHTML = name.replaceAll('-', ' ')
+                        pokemonsub.innerHTML = name1.replaceAll('-', ' ')
+                        console.log("name: " + name + " "+  name1)
+                    }
                     type.innerHTML = "Normal";
                     });
                 });
