@@ -13,7 +13,7 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pt_br&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
 
@@ -36,6 +36,7 @@ search.addEventListener('click', () => {
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
+            const pokemon = document.querySelector('.weather-box .pokemon');
             const description = document.querySelector('.weather-box .description');
             const type = document.querySelector('.weather-box .type');
             const humidity = document.querySelector('.weather-details .humidity span');
@@ -56,9 +57,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Elétrico";
                     });
                 });
@@ -76,9 +87,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Gelo";
                     });
                 });
@@ -96,9 +117,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Água";
                     });
                 });
@@ -116,9 +147,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Grama";
                     });
                 });
@@ -136,9 +177,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Solo";
                     });
                 });
@@ -156,9 +207,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Inseto";
                     });
                 });
@@ -176,9 +237,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Pedra";
                     });
                 });
@@ -196,9 +267,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Fogo";
                     });
                 });
@@ -216,9 +297,19 @@ search.addEventListener('click', () => {
                     .then(response => response.json())
                     .then(imgs => {
                     
-                    let url = imgs.sprites.other.home.front_default;
-                    image.src = url;
-                    description.innerHTML = imgs.name.replaceAll('-', ' ');
+                    let url = imgs.sprites.other["official-artwork"].front_default;
+                    let url2 = imgs.sprites.other.home.front_default;
+                    let url3 = imgs.sprites.front_default;
+                    if(url === null && url2 === null){
+                        image.src = url3;
+                    }
+                    else if(url === null){
+                        image.src = url2;
+                    }
+                    else{
+                        image.src = url;
+                    }
+                    pokemon.innerHTML = imgs.species.name.replaceAll('-', ' ');
                     type.innerHTML = "Normal";
                     });
                 });
@@ -228,12 +319,12 @@ search.addEventListener('click', () => {
 
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
-
+            description.innerHTML = `${json.weather[0].description}`;
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
 
-            container.style.height = '610px';
+            container.style.height = '620px';
         });
 });

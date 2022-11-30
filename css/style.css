@@ -14,8 +14,11 @@ body {
 
 }
 .header {
-	position: static;
+	position: sticky;
+    align-items: center;
+    margin: auto;
     width: 100%;
+    height: min-content;
 }
 
 .container {
@@ -83,15 +86,19 @@ body {
 
 .weather-box img {
     width: 60%;
-    margin-top: 30px;
+    margin-top: 10px;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .weather-box .temperature {
     position: relative;
     color: #06283D;
     font-size: 4rem;
-    font-weight: 800;
-    margin-top: 30px;
+    font-weight: 700;
+    margin-top: 20px;
     margin-left: -16px;
 }
 
@@ -99,6 +106,13 @@ body {
     position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;
+}
+
+.weather-box .pokemon {
+    color: #06283Ddc;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 
 .weather-box .description {
