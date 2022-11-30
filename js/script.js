@@ -40,7 +40,7 @@ search.addEventListener('click', () => {
             const type = document.querySelector('.weather-box .type');
             const humidity = document.querySelector('.weather-details .humidity span');
             const wind = document.querySelector('.weather-details .wind span');
-            const pokeapi = "http://pokeapi.co/api/v2/type/"
+            const pokeapi = "https://pokeapi.co/api/v2/type/"
 
 
             if (json.weather[0].main === "Rain" || json.weather[0].main === "Thunderstorm") {
