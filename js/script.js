@@ -287,7 +287,7 @@ search.addEventListener('click', () => {
                         pokemonsub.innerHTML = name1.replaceAll('-', ' ')
                         console.log("name: " + name + " "+  name1)
                     }
-                    type.innerHTML = "Inseto";
+                    type.innerHTML = "Inceto";
                     });
                 });
             }
