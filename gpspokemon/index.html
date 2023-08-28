@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>			
+		<title>PokeGPS</title>
+        <link rel="stylesheet" href="css/style.css?v=6">
+		<link rel = "icon" href = "https://user-images.githubusercontent.com/73800841/203061427-5ee46928-58e3-4209-9cf1-72966222dad2.png" type = "image/x-icon">
+		<script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div class="header">
+		<img src="https://user-images.githubusercontent.com/73800841/202286078-c4408e42-f923-45cb-88cc-8c733dd32486.png" class="image1">
+	</div>
+	<div class="container">
+
+		<div class="search-box">
+				<i class="fa-solid fa-location-dot"></i>
+				<input type="text" placeholder="Digite um Local">
+				<button class="fa-solid fa-magnifying-glass" id="button"></button>
+
+		</div>
+		<div class="not-found">
+			<img src="images/404.png" alt="...">
+				<p>Local Invalido</p>
+		</div>
+		
+		<div class="weather-box">
+			<img src="" alt="...">
+			<p class="pokemon"></p>
+			<p class="pokemonsub"></p>
+			<p class="type"></p>
+			<p class="temperature"></p>
+			<p class="description"></p>
+		</div>
+        
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Umidade</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Vento</p>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+
+    <script src="js/script.js?v=6" type="text/javascript"></script>
+	<script src="js/tipos.js"></script>
+</body>
+
+</html>
