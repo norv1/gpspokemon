@@ -17,4 +17,5 @@ var tipos = {
     "dark": "sombrio",
     "fairy": "fada",
     "shadow": "fogo",
+    "undefined": "indefinido"
 }
