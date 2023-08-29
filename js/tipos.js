@@ -18,4 +18,5 @@ var tipos = {
     "fairy": "fada",
     "shadow": "fogo",
     "undefined": "indefinido"
+    "normal": "normal"
 }
