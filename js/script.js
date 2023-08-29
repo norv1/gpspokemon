@@ -71,7 +71,7 @@ button.addEventListener('click', pokegps)
                 else{
                     let type1 = imgs.types[0].type.name;
                     let type2 = imgs.types[1].type.name;
-                    type.innerHTML = (tipos[type1] +" "+tipos[type2])
+                    type.innerHTML = (tipos[type1] +" | "+tipos[type2])
                 }
     
                 });
