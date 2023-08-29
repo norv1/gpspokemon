@@ -5,7 +5,7 @@ var tipos = {
     "water": "água",
     "grass": "grama",
     "ground": "solo",
-    "bug": "fantasma",
+    "bug": "inseto",
     "rock": "pedra",
     "fire": "fogo",
     "flying": "voador",
