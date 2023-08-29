@@ -148,6 +148,5 @@ button.addEventListener('click', pokegps)
         weatherBox.classList.add('fadeIn');
         weatherDetails.classList.add('fadeIn');
         container.style.height = '620px';
-        
         })
     }
