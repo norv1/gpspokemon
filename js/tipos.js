@@ -16,7 +16,6 @@ var tipos = {
     "dragon": "dragão",
     "dark": "sombrio",
     "fairy": "fada",
-    "shadow": "fogo",
     "undefined": "indefinido",
     "normal": "normal"
 }
