@@ -1,4 +1,4 @@
-var tipos = {
+let tipos = {
     "ghost": "fantasma",
     "electric": "elétrico",
     "ice": "gelo",
