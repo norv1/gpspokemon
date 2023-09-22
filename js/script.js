@@ -10,7 +10,6 @@ button.addEventListener('click', pokegps)
 
 function procurar(event){
 if (event.keyCode === 13 || event.key === 'Enter'){
-    console.log('Enter key was pressed');
     pokegps()
     }
 }
@@ -26,13 +25,15 @@ function pokegps(){
     const description = document.querySelector('.weather-box .description');
     const type = document.querySelector('.weather-box .type');
     const humidity = document.querySelector('.weather-details .humidity span');
+    const time = document.querySelector('.weather-details .time span');
     const wind = document.querySelector('.weather-details .wind span');
+
     const pokeapi = "https://pokeapi.co/api/v2/type/"
 
     if (city === '')
         return;
-    console.log("executando");
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pt_br&appid=${APIKey}`)
+    let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pt_br&appid=${APIKey}`;
+    fetch(apiLink)
         .then(response => response.json())
         .then(json => {
             function abreurl(n){
@@ -103,6 +104,27 @@ function pokegps(){
         error404.style.display = 'none';
         error404.classList.remove('fadeIn');
     }
+    
+    let options = {
+        method: 'GET',
+        headers: { 'x-api-key': 'snWLTU5HWAfxXaQs0Cv6Dg==Z9TUHJlJfeTrAY5b' }
+      }    
+    let hourApi = `https://api.api-ninjas.com/v1/worldtime?city=${city}`
+    fetch(hourApi,options)
+        .then(response => response.json())
+        .then(hours =>{
+            var hour = hours.hour;
+            var minutes = hours.minute;
+            console.log(hour,minutes)
+
+    if (hour >12 && hour <=24){
+        document.getElementById("AMPM").innerHTML = "PM";
+    } 
+    else{
+        document.getElementById("AMPM").innerHTML = "AM";
+    }
+    time.innerHTML = `${hour}:${minutes}`; 
+})
 
     let urlpoke = ""
     if (json.name === "Chernobyl") {
@@ -136,7 +158,7 @@ function pokegps(){
         abreurl(urlpoke)
 
         temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-        humidity.innerHTML = `${json.main.humidity}%`;
+        humidity.innerHTML = `${json.main.humidity}%`;   
         wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
         description.innerHTML = `${json.weather[0].description}`;
         weatherBox.style.display = '';
